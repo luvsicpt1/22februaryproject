@@ -4,7 +4,7 @@ from .models import Author, Book
 from .serializers import AuthorSerializer, BookSerializer
 
 
-# 🔹 Author List + Create
+
 class AuthorListCreateView(
     mixins.ListModelMixin,
     mixins.CreateModelMixin,
@@ -20,7 +20,6 @@ class AuthorListCreateView(
         return self.create(request)
 
 
-# 🔹 Book List + Create
 class BookListCreateView(
     mixins.ListModelMixin,
     mixins.CreateModelMixin,
@@ -36,7 +35,6 @@ class BookListCreateView(
         return self.create(request)
 
 
-# 🔹 Book Delete
 class BookDeleteView(
     mixins.DestroyModelMixin,
     generics.GenericAPIView
